@@ -1,12 +1,17 @@
-def add(a, b):
-    return a + b
+from calculator import add, subtract, multiply, divide
 
-def subtract(a, b):
-    return a - b
+def test_add():
+    assert add(2, 3) == 5
 
-def multiply(a, b):
-    return a * b
+def test_subtract():
+    assert subtract(5, 3) == 2
 
-def divide(a, b):
-    # bug: no zero division check
-    return a / b
+def test_multiply():
+    assert multiply(2, 3) == 6
+
+def test_divide():
+    assert divide(10, 2) == 5
+
+def test_divide_by_zero():
+    result = divide(10, 0)
+    assert result == "Cannot divide by zero"
