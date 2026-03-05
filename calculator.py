@@ -8,5 +8,6 @@ def multiply(a, b):
     return a * b
 
 def divide(a, b):
-    # bug: no zero division check
+    if b == 0:
+        return "Cannot divide by zero"
     return a / b
